@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Directores</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: black;
+            color: #f1c40f;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        .volver {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .volver a {
+            text-decoration: none;
+            background: black;
+            color: #f1c40f;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .volver a:hover {
+            background: #f1c40f;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Listado de Directores Registrados</h1>
+
+    {% if directores %}
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+        </tr>
+        {% for d in directores %}
+        <tr>
+            <td>{{ d.nombre }}</td>
+            <td>{{ d.nacionalidad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p style="text-align:center;">No hay directores</p>
+    {% endif %}
+
+    <div class="volver">
+        <a href="/">Volver</a>
+    </div>
+</div>
+
+</body>
+</html>

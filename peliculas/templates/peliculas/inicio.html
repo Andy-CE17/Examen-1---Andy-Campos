@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .contenedor {
+            width: 80%;
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 30px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px;
+            background-color: #111;
+            color: #f1c40f;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #111;
+        }
+
+        .menu a:hover {
+            background-color: #f1c40f;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Sistema de Gestión de Películas</h1>
+
+        <div class="menu">
+            <a href="/directores/">Ver directores</a>
+            <a href="/peliculas/">Ver películas</a>
+            <a href="/admin/">Ir al panel admin</a>
+        </div>
+    </div>
+
+</body>
+</html>
